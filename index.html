@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Agenda</title>
+        <!-- Reset css -->
+        <link rel="stylesheet" href="./css/reset.min.css">
+        <link rel="icon" type="image/png" href="./img/weekly-calendar.png" />
+        <!-- Import Google Icon Font -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Import materialize.css -->
+        <link type="text/css" rel="stylesheet" href="./css/materialize.min.css" media="screen,projection">
+        <!-- Import page's Stylesheet -->
+        <link type="text/css" rel="stylesheet" href="./css/index.css">
+        <!-- Import Animate.css -->
+        <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
+        <!-- Material Design Icon -->
+        <link href="./node_modules/mdi/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">Agenda de Tarefas</div>
+            <div class="underDash"></div>
+            <div class="eventsContainer">
+                <ul class="collapsible" id="listEvents">
+                    <li class="event" id="task1">
+                        <div class="collapsible-header nameEvent">
+                            <i class="mdi mdi-checkbox-blank-circle important labelImportance"></i> SECOM 2018
+                            <div class="iconsEvent" data-id="task1">
+                                <i class="mdi mdi-clock"></i><span class="time">01:00 PM</span>&nbsp;-&nbsp;
+                                <span class="date">Qua, 9 Mai</span>
+                                <i class="mdi mdi-check doneTask"></i><i class="mdi mdi-delete-forever deleteTask"></i>
+                            </div>
+                        </div>
+                        <div class="collapsible-body description"><span>Semanada da Computação - UFV.</span></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-floating btn-large waves-effect waves-light teal lighten-2 addNewTask"><i class="material-icons">add</i></div>
+        </div>
+        <div class="addEventContainer">
+            <div class="addPanel">
+                <div class="row"><i class="mdi mdi-close-circle closePanel"></i></div>
+                <div class="insidePanel">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="nameTask" type="text" maxlength="34" autocomplete="off">
+                            <label for="nameTask">Nome da Tarefa</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea id="descriptionTask" class="materialize-textarea"></textarea>
+                            <label for="descriptionTask">Descrição</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <select id="importanceTask">
+                                <option value="" selected>Selecione</option>
+                                <option value="urgent">Urgente</option>
+                                <option value="important">Importante</option>
+                                <option value="notImportant">Irrelevante</option>
+                            </select>
+                            <label>Nível de Importância</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s7">
+                            <input type="text" placeholder="Data do Evento" class="datepicker">
+                        </div>
+                        <div class="input-field col s4 offset-s1">
+                            <input type="text" placeholder="Hora do Evento" class="timepicker">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="waves-effect waves-light btn col s5" id="addTaskList">Adicionar <i class="mdi mdi-calendar-plus"></i></div>
+                        <div class="waves-effect waves-light btn col s5 offset-s2 red accent-2" id="clearForm">Limpar <i class="mdi mdi-close"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Import jQuery -->
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <!-- JavaScript at end of body for optimized loading -->
+        <script src="./js/materialize.js"></script>
+        <!-- Import page's JavaScript -->
+        <script src="./js/index.js"></script>
+    </body>
+</html>
